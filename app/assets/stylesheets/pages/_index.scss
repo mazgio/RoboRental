@@ -1,0 +1,16 @@
+// Import page-specific CSS files here. Index is considered the parent page of all scss files.
+@import "home";
+@import "show";
+@import "login";
+@import "dashboard";
+
+.robot-card {
+  font-family: "JetBrains Mono", "monospace";
+  box-shadow: 0 0 10px rgba(128, 128, 128, 0.30);
+  img {
+    width: 100%;
+    max-height: 250px;
+    object-fit: cover;
+    object-position: top; // This makes the cards show the "face" of the robots
+  }
+}

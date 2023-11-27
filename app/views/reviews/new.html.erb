@@ -1,0 +1,27 @@
+<div class="new-booking-container d-flex justify-content-center" data-controller="fake-modal">
+  <div class="container m-4 p-4">
+    <div class="row align-items-center row justify-content-center font-form">
+      <div class="col-lg-7 m-3 p-4 rounded border coloring">
+        <div class="d-flex justify-content-between align-items-center">
+          <div>
+            <h2>Robot specs</h2>
+            <p>Model: <%= @robot.model %></p>
+            <p>Overview: <%= @robot.overview %></p>
+            <p>Price: <%= @robot.price %></p>
+            <p>Rating: <%= @robot.rating %></p>
+          </div>
+          <div>
+            <img class="img-properties-form" src="<%= @robot.image_urls.first %>" alt="Robot-picture">
+          </div>
+        </div>
+      </div>
+
+
+
+        <div class="col-lg-7 m-3 p-4 rounded border coloring">
+          <h2> Leave your review here: </h2>
+          <%= render "shared/review_form", booking: @booking, review: @review%>
+        </div>
+      </div>
+    </div>
+  </div>

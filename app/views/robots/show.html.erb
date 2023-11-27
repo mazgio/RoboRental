@@ -1,0 +1,59 @@
+<div class="show-page-container container p-4 mt-4 mb-4">
+  <div class="container d-flex pb-4">
+    <div class="container image-container p-0">
+      <div class="splide" data-controller="splide">
+        <div class="splide__track">
+            <!-- Additional required wrapper -->
+          <ul class="splide__list">
+            <% @robot.image_urls.each do |robot_image| %>
+              <li class="splide__slide">
+              <img class="w-100" src="<%= robot_image %>">
+              </li>
+            <% end %>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="robot-info container" style="padding: 0 50px">
+      <h1><%= @robot.model %></h1>
+      <p><%= @robot.overview %></p>
+        <div class="price-container">
+          <h3>$ <%= number_with_precision(@robot.price, precision: 2) %></h3>
+          <p><strong>Daily rate </strong></p>
+        </div>
+          <p><strong>Owner: </strong><%= @robot.user_id %></p>
+          <p>Do you want to rent this robot?</p>
+          <%= link_to "Rent this bad boy", new_robot_booking_path(@robot), class: "btn btn-dark mb-3" %>
+    </div>
+  </div>
+
+    <div class="container mt-5">
+      <h2>Reviews about <%= @robot.model %></h2>
+      <p>Average rating: <%= @robot.rating %></p>
+      <% @robot.reviews.each do |review| %>
+        <div class="review-card mt-5">
+          <p><strong><a href=""><%= review.booking.user.first_name %> <%= review.booking.user.last_name %></strong></a> said:</p>
+          <p><%= review.content %><br>
+          <em class="review-timestamp">2 days ago</em></p>
+        </div>
+      <% end %>
+      <div class="review-card mt-5">
+        <p><strong><a href="https://de.wikipedia.org/wiki/Mustermann">Max Mustermann</strong></a> said:</p>
+        <p>Super gud Robot that helps me get into Berghain<br>
+        <em class="review-timestamp">2 days ago</em></p>
+      </div>
+        <div class="review-card">
+          <p><strong><a href="https://de.wikipedia.org/wiki/Mustermann">Erika Schmidt</strong></a> said:</p>
+          <p>Does backflips and shit! Amazing. Would recommend!!!<br>
+          <em class="review-timestamp">2 months ago</em></p>
+        </div>
+        <div class="review-card">
+          <p><strong><a href="https://de.wikipedia.org/wiki/Mustermann">Max Mustermann</strong></a> said:</p>
+          <p>Does the dishes, etc. Wird nie µde, schläft nie ein. <br>I sent him to the gym and he didn't gain any weight, which is weird. Doesn't come with a handbook...<br>
+          <em class="review-timestamp">9 months ago</em></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,16 @@
+<div class="background-image">
+  <div class="container info">
+    <h1><strong>RoboRental</strong></h1>
+    <h4>Your Source for Whirring Wonders!</h4><br>
+    <p>Are you tired of your daily routine?<br>
+    Feeling like you need a sidekick with a metallic touch? Look no further!<br>
+    RoboRental is here to upgrade your life, one beep at a time.<br>
+    Let the adventure with our robots begin! </p>
+    <% unless user_signed_in? %>
+      <%= link_to "Sign Up", new_user_registration_path, class: "btn btn-light sign-up-button me-4" %>
+      <%= link_to "Log In", new_user_session_path, class: "btn btn-light sign-up-button" %>
+      <% else %>
+      <%= link_to "See our Robots", robots_path, class: "btn btn-light sign-up-button me-4" %>
+    <% end %>
+  </div>
+</div>

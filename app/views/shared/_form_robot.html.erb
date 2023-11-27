@@ -1,0 +1,7 @@
+
+<%= simple_form_for(robot) do |f| %>
+  <%= f.input :model, placeholder: "Type model..." %>
+  <%= f.input :overview, placeholder: "Really good boy..." %>
+  <%= f.input :price, placeholder: "Daily rate" %>
+  <%= f.submit "Add to my Garage", class: "btn bg-dark text-white" %>
+<% end %>

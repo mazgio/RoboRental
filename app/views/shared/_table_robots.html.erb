@@ -1,0 +1,25 @@
+<table class="styled-table mt-4">
+    <thead class="border-bottom p-2">
+        <tr>
+            <th>#id</th>
+            <th>Model</th>
+            <th>Overview</th>
+            <%# <th>Robot model</th> %>
+            <th>Price</th>
+            <th>Delete</th>
+        </tr>
+    </thead>
+    <tbody>
+      <% user_robots.each do |r| %>
+        <tr class="border-bottom p-2">
+            <td><%= r.id %></td>
+            <td><%= r.model %></td>
+            <td><%= r.overview %></td>
+            <td><%= r.created_at %></td>
+            <td>
+              <%= link_to "Delete your robot", dashboard_path %>
+            </td>
+        </tr>
+      <% end %>
+    </tbody>
+</table>

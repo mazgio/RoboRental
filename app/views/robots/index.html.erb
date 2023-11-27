@@ -1,0 +1,22 @@
+<div class="container">
+
+    <div class="row mt-5">
+
+      <% @robots.each do |robot| %>
+        <div class="col-4 d-flex mt-5">
+          <div class="card mb-4 flex-fill robot-card">
+            <img class="card-img-top img-fluid" src="<%= robot.image_urls.first %>">
+
+            <div class="card-body vh-50">
+              <h3 class="card-title"><%= robot.model %></h3>
+              <p class="card-text"><%= robot.overview %></p>
+              <p class="card-text">Price: $<%= number_with_precision(robot.price, precision: 2) %></p>
+              <p class="card-text">Rating: <%= robot.rating %></p>
+              <%= link_to 'See Robot', robot_path(robot), class: "btn btn-dark w-100 mb-3" %>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>

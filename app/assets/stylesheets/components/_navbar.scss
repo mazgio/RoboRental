@@ -1,0 +1,28 @@
+
+.navbar-lewagon {
+  justify-content: space-between;
+  padding: 10px; // Adjust the desired padding
+  background: white;
+  padding:0px;
+  font-family: "JetBrains Mono", "monospace";
+}
+
+.navbar-lewagon .navbar-collapse {
+  flex-grow: 0;
+}
+
+.navbar{
+  padding:0 !important;
+}
+
+.navbar-brand {
+  img{
+    width: 80px;
+    height: 80px;
+  }
+}
+
+.navbar_container {
+  border: black;
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
+}

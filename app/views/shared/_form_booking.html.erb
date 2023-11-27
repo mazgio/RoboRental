@@ -1,0 +1,6 @@
+
+<%= simple_form_for [ robot, booking ] do |f| %>
+  <%= f.input :activity, prompt: "Select...", collection: ["Gardening 🧑‍🌾", "Pet-like buddy 🦮", "Robot Dance Party Extravaganza 🕺", "Hilarious Joke-telling Robot Stand-up 🧑‍🎤"] %>
+  <%= f.input :comment, placeholder: "Type something..." %>
+  <%= f.submit "Book it now", class: "btn bg-dark text-white", data: {action: "click->fake-modal#activateSuccess"}  %>
+<% end %>

@@ -1,0 +1,46 @@
+<div class="new-booking-container d-flex justify-content-center" data-controller="fake-modal">
+  <div class="container m-4 p-4">
+    <div class="row align-items-center row justify-content-center font-form">
+      <div class="col-lg-7 m-3 p-4 rounded border coloring">
+        <div class="d-flex justify-content-between align-items-center">
+          <div>
+            <h1>Robot specs</h1>
+            <p>Model: <%= @robot.model %></p>
+            <p>Overview: <%= @robot.overview %></p>
+            <p>Price: <%= @robot.price %></p>
+            <p>Rating: <%= @robot.rating %></p>
+          </div>
+          <div>
+            <img class="img-properties-form" src="<%= @robot.image_urls.first %>" alt="Robot-picture">
+          </div>
+        </div>
+      </div>
+
+      <%# <div class="col-4 m-4 rounded border coloring dimension">
+      </div> %>
+
+      <% if flash[:notice] == 'You successfully booked this robot!' %>
+        <div class="background hidden_success">
+          <div class="modal_wrapper">
+            <div class="booking">
+              <div class="booking-info">
+                <h1>Booking Details:</h1>
+                <img src="<%= @robot.image_urls.first %>" style="height: 50%">
+                <p><strong>Robot Model:</strong> <%= @robot.model %></p>
+                <p></p>
+                <p><%= notice %></p>
+                <p><%= link_to 'Browse more Robots', robots_path, class: "btn btn-dark mb-3" %>            <%= link_to 'See my bookings', dashboard_path, class: "btn rounded border btn-light mb-3" %></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    <% end %>
+
+        <div class="col-lg-7 m-3 p-4 rounded border coloring">
+          <h2> Book your bad boy here: </h2>
+          <%= render "shared/form_booking", robot: @robot, booking: @booking%>
+        </div>
+      </div>
+    </div>
+  </div>

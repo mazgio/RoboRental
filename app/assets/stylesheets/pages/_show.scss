@@ -1,0 +1,88 @@
+// Specific CSS for your home-page
+.show-page-container {
+  min-height: 100vh;
+  width: 100vw;
+}
+
+.container {
+  margin-top:100px !important;
+  font-family: "JetBrains Mono", "monospace";
+}
+
+.review-card {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  padding-top: 16px;
+  border-top: 1px solid lightgray;
+}
+
+.review-timestamp {
+  color: gray;
+}
+
+.robot-hero-image{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.robot-info{
+  justify-content: space-between;
+  padding: 0 50px;
+  // help! Want to give the info some breating space to the left
+}
+
+.splide__slide {
+  height: 500px;
+  background-color: #eee;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+}
+
+.hidden_success{
+  width: 100%;
+  height: 150vh !important;
+  background: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.hidden_success img {
+  -o-object-fit: contain;
+  object-fit: contain;
+  margin-bottom:20px;
+  border-radius: 50%;
+  height: 150px;
+  width: 150px;
+}
+
+.modal_wrapper {
+  width: 800px;
+  padding: 50px 0;
+  margin-top:200px;
+  box-shadow: 0 5px 16px rgba(0, 0, 0, 0.2);
+  background: #fff;
+  color: #000;
+  position: relative;
+  z-index: 10;
+  border-radius: 10px;
+  text-align:center;
+  align-items:center;
+}
+
+.booking-info h1{
+  margin-bottom:30px;
+}
+
+.booking {
+  text-align:center;
+}
+
+.btn-dark{
+  font-family: "JetBrains Mono", "monospace";
+}

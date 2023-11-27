@@ -1,0 +1,25 @@
+<table class="styled-table mt-4">
+    <thead class="border-bottom p-2">
+        <tr>
+            <th>#id</th>
+            <th>Activity</th>
+            <th>Content</th>
+            <%# <th>Robot model</th> %>
+            <th>Booking date</th>
+            <th>Review</th>
+        </tr>
+    </thead>
+    <tbody>
+      <% user_bookings.each do |b| %>
+        <tr class="border-bottom p-2">
+            <td><%= b.id %></td>
+            <td><%= b.activity %></td>
+            <td><%= b.comment %></td>
+            <td><%= b.created_at %></td>
+            <td>
+              <%= link_to "Give feedback➔", new_booking_review_path(b) %>
+            </td>
+        </tr>
+      <% end %>
+    </tbody>
+</table>

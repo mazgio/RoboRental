@@ -1,0 +1,53 @@
+
+.style-db {
+  border-radius: 5px;
+  background: white;
+  box-shadow: 0 0 10px rgba(128, 128, 128, 0.30);
+}
+
+.first-wrapper {
+  display: flex;
+  justify-content: center;
+  // margin-top: 100px;
+}
+
+.layout-db-1 {
+  width: 660px;
+  margin: 30px;
+  padding: 40px;
+}
+
+.layout-db-2 {
+  width: auto;
+  margin: 30px;
+  padding: 40px;
+  flex-shrink: 0;
+}
+
+.icon-db {
+  object-fit: contain;
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(128, 128, 128, 0.30);
+}
+
+.font-db {
+  font-family: "JetBrains Mono", "monospace";
+  color: black
+}
+
+.activity-wrapper {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.style-activity-db {
+  // background-color: #322b2b;
+  border-radius: 10px;
+  // color: white;
+  padding: 20px;
+  width: 200px;
+  box-shadow: 0 0 10px rgba(128, 128, 128, 0.30);
+}
